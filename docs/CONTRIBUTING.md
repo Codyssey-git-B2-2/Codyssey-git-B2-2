@@ -4,30 +4,30 @@
 
 - 브랜치  전략 : github flow
 
-- 우리 팀이 GitHub Flow를 선택한 이유 (3줄 이내):
+### GitHub Flow를 선택한 이유 (3줄 이내): 
+4인의 작은 팀이라 develop/release/hotfix를 따로 두는 Git Flow보다 main과 feature/* 두 종류만 쓰는 편이 규칙이 단순하고 실수가 적습니다.
+모든 변경이 PR을 거쳐 main에 병합되므로 리뷰와 승인 기록이 자연스럽게 남고 main을 항상 깨지지 않는 상태로 유지할 수 있습니다.
+브랜치를 작게 만들어 빨리 병합하면 오래 살아남은 브랜치 때문에 생기는 큰 충돌을 줄일 수 있고 충돌이 나도 범위가 작아 해결과 기록이 쉽습니다.
+
+### 참고: git flow vs github flow
+![alt text](https://singhajit.com/assets/img/posts/git/git-flow-vs-github-flow.png)
+
+- Git Flow
+• 5가지 종류의 브랜치(master, develop, feature, release, hotfix)를 엄격하게 나누어 사용하는 전략
+• 배포를 위한 브랜치(release)가 따로 있어 여러 버전을 동시에 유지보수해야 하는 패키지 소프트웨어(모바일 앱, 설치형 프로그램 등)에 적합
+
+- GitHub Flow (단순하고 빠른 관리)
+• main(또는 master) 브랜치 하나와 수시로 생성되는 작업 브랜치 딱 두 종류만 사용하는 전략
+• 수시로 코드를 병합하고 바로바로 배포하는 것을 목표
 
 ## 브랜치 네이밍 규칙
 
 - main : 주 브랜치
 
-- feat/ 기능요약 : 피쳐 브랜치
-
-
-| 작업 유형 | 의미 |
-| --- | --- |
-| `feat` | 새로운 기능 추가 |
-| `fix` | 버그 수정 |
-| `docs` | 문서 수정 |
-| `style` | 코드 formatting, 세미콜론 누락, 코드 자체의 변경이 없는 경우 |
-| `refactor` | 코드 리팩토링 |
-| `test` | 테스트 코드, 리팩토링 테스트 코드 추가 |
-| `chore` | 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore |
-| `rename` | 파일 또는 폴더 명을 수정하거나 옮기는 작업만인 경우 |
-| `remove` | 파일을 삭제하는 작업만 수행한 경우 |
-| `!HOTFIX` | 급하게 치명적인 버그를 고쳐야 하는 경우 |
+- feature/ 기능요약 : 작업 브랜치
 
 - 기능 요약의 경우 하이픈(-)으로 작성한다
-ex) feat/#2-login, feat/#2-sign-in
+ex) feat/login, feat/sign-in
 
 ## 커밋 메시지 컨벤션
 
@@ -95,6 +95,10 @@ ex) feat/#2-login, feat/#2-sign-in
 ## ✍️ Description
 
 - 변경 내용과 이유를 상세하게 적어주세요.
+
+## 🧪 Validation
+
+- 테스트 검증 내용을 작성해주세요.
 
 ## ✅ Checklist
 
