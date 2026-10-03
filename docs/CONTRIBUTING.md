@@ -73,8 +73,35 @@ ex) feat/#2-login, feat/#2-sign-in
 
 ## PR 규칙
 
-- PR 본문 필수 항목(What / Why / How + Closes #issue):
-- 병합 조건:
+### PR 본문 필수 항목(What / Why / How + Closes #issue)
+
+### 필수 조건
+- 관련된 작업의 이슈 번호 연결
+
+### 병합 조건
+- 본인 외 1명 이상 승인
+- 리뷰 코멘트 모두 처리
+- main 최신 반영 후 충돌 없음
+- 본문 필수 항목 충족
+- main 직접 push 금지
+- 병합 후 브랜치 삭제
+
+### PR 템플릿
+```
+## 🔗 Issue
+
+- resolved #{issue_number}
+
+## ✍️ Description
+
+- 변경 내용과 이유를 상세하게 적어주세요.
+
+## ✅ Checklist
+
+- [ ] 컨벤션에 맞는 PR 타이틀
+- [ ] 관련 이슈 연결
+- [ ] PR 관련 정보 연결 (작업자, 라벨, 마일스톤 등)
+```
 
 ## 코드 리뷰 규칙
 
