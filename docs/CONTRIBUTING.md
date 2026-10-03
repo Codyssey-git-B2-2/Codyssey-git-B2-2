@@ -90,7 +90,7 @@ ex) feature/login, feature/sign-in
 ```
 ## 🔗 Issue
 
-- resolved #{issue_number}
+- Closes #{issue_number}
 
 ## ✍️ Description
 
