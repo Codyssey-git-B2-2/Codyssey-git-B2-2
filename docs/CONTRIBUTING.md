@@ -27,7 +27,7 @@
 - feature/ 기능요약 : 작업 브랜치
 
 - 기능 요약의 경우 하이픈(-)으로 작성한다
-ex) feat/login, feat/sign-in
+ex) feature/login, feature/sign-in
 
 ## 커밋 메시지 컨벤션
 
