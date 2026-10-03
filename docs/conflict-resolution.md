@@ -63,39 +63,7 @@ if __name__ == "__main__":
 
 ### 해결 과정(How)
 - 디스코드에 해당 사항을 팀원들과 공유한다.
-    ![alt text](image.png)
-    ```🚨 충돌 발생 상황 공유드립니다. (PR #20 ← main)
-
-#14(feature/add)가 main에 병합된 뒤 #20 브랜치(feature/conflict-subtract)에서 git merge origin/main을 했더니 src/utils.py에서 충돌이 발생했습니다.
-
-
-[충돌 위치: 두 곳]
-1. multiply() 바로 아래
-    add() / subtract() 함수 정의
-2. if __name__ == "__main__": 블록 끝
-    add 테스트 / subtract 테스트
-
-
-[원인]
-#14와 #20이 같은 위치에 서로 다른 함수를 추가하며 기능은 다르지만 같은 줄 위치에 코드를 넣어서 충돌 발생
-
-<<<<<<< feature/conflict-subtract
-    def subtract(...) ...
-=======
-    def add(...) ...
->>>>>>> main
-(테스트 블록도 동일)
-
-
-[해결 방향]
-- 한쪽을 버리지 않고 둘 다 남기는(keep both) 방식으로 해결 예정
-- 순서는 main에 이미 있는 add를 먼저, subtract를 그 뒤에 두며 정의부와 테스트부 모두 같은 순서로 작성
-- 해결은 나중에 병합하는 쪽인 #20 브랜치에서 진행
-
-
-[PR 링크]
-- #14: https://github.com/Codyssey-git-B2-2/Codyssey-git-B2-2/pull/14
-- #20: https://github.com/Codyssey-git-B2-2/Codyssey-git-B2-2/pull/20
+    ![alt text](/img/image.png)
 ```txt
 🚨 충돌 발생 상황 공유드립니다. (PR #20 ← main)
 
@@ -154,6 +122,12 @@ if __name__ == "__main__":
 - 검증: `python3 src/utils.py` 출력 `ok`, doctest 출력 없음 / 마커 검색 결과 없음
 - PR #20 상태: 충돌 해소 여부, 리뷰 승인, 병합 여부
 - 관련 PR: [#14](https://github.com/Codyssey-git-B2-2/Codyssey-git-B2-2/pull/14), [#20](https://github.com/Codyssey-git-B2-2/Codyssey-git-B2-2/pull/20)
+
+- 충돌 해결 전
+![alt text](/img/image-1.png)
+
+- 충돌 해결 후
+![alt text](/img/image-2.png)
 
 ### 배운 점(Learnings)
 - 서로 다른 기능이라도 같은 위치(함수 정의 바로 아래, 테스트 블록 끝)에 코드를 추가하면 충돌한다. 같은 파일에 새 함수를 추가하는 PR은 작업 전에 위치를 조율하거나 먼저 병합된 PR이 정리된 뒤에 시작한다.
