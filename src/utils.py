@@ -3,7 +3,7 @@ def multiplyUtilFunction(a, b):
 
 
 if __name__ == "__main__":
-    print("multiply test")
-    assert multiply(1, 2) == 2
-    assert multiply(0, 2) == 0
+    print("multiplyUtilFunction test")
+    assert multiplyUtilFunction(1, 2) == 2
+    assert multiplyUtilFunction(0, 2) == 0
     print("ok")
