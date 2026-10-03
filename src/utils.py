@@ -1,4 +1,4 @@
-def multiply(a, b):
+def multiplyUtilFunction(a, b):
     return a * b
 
 
