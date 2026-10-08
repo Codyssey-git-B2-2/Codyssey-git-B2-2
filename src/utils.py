@@ -13,10 +13,18 @@ def add(a: int | float, b: int | float) -> int | float:
     return a + b
 
 
+def divide(a: int | float, b: int | float) -> float:
+    """a를 b로 나눈 값을 반환한다."""
+    if b == 0:
+        raise ValueError("0으로 나눌 수 없습니다.")
+    return a / b
+
+
 if __name__ == "__main__":
     print("multiply test")
     assert multiply(1, 2) == 2
     assert multiply(0, 2) == 0
     assert add(1, 2) == 3
     assert add(-1, 1) == 0
+    assert divide(4, 2) == 2.0
     print("ok")
