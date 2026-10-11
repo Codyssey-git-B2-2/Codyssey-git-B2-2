@@ -1,6 +1,6 @@
 # Codyssey-git-B2-2
 
-Codyssey "Python과 Git 심화" 미션을 위한 팀 협업 저장소입니다.
+Codyssey "친구 3~5명과 함께 프로그램 만드는 법 연습하기" 미션을 위한 팀 협업 저장소입니다.
 4인 팀이 GitHub Flow, Issue/PR 연동, 코드 리뷰, 충돌 해결, Git 트러블슈팅을 직접 실습하고 기록합니다.
 
 ## 구성
