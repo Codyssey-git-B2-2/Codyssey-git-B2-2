@@ -1,7 +1,7 @@
 # Submission Index
 
 ## Team
-- 팀명: (미정)
+- 팀명: CodySsey B2-2
 - 저장소: https://github.com/Codyssey-git-B2-2/Codyssey-git-B2-2
 
 ## Member PRs
