@@ -25,6 +25,7 @@
 ### 배운 점(Learnings)
 -
 
+
 ## 충돌 기록 #2
 
 ### 참여자
@@ -33,9 +34,9 @@
 
 ### 상황(What happened)
 - 팀원(@huiwoo-jo)이 `PR #20`(`feature/conflict-subtract`)을 통해 `src/utils.py`에 뺄셈(`subtract()`) 기능 및 테스트 코드를 작성하고 `main`에 병합함.
-- 작성자(@ParkSujeong)는 `PR #24`(`feature/conflict-divide-clean`)를 통해 `src/utils.py`에 나눗셈(`divide()`) 기능 및 테스트 코드를 작성하여 `main`에 병합을 시도함.
+- 작성자(@SJendministrator)는 `PR #26`(`feature/conflict-divide-clean`)를 통해 `src/utils.py`에 나눗셈(`divide()`) 기능 및 테스트 코드를 작성하여 `main`에 병합을 시도함.
 - 두 PR이 모두 `main`에서 출발했으나, 동일한 파일(`src/utils.py`)의 `add()` 함수 아래 위치와 `if __name__ == "__main__":` 테스트 블록 끝자리에 각각 새로운 코드를 추가함.
-- `PR #20`이 `main`에 먼저 반영됨에 따라, `PR #24`에서 `main`을 병합(`git merge origin/main` 또는 `git pull origin main`)하는 과정에서 동일 인접 라인에 대한 비자명 병합 충돌(`Merge Conflict`)이 발생함.
+- `PR #20`이 `main`에 먼저 반영됨에 따라, `PR #26`에서 `main`을 병합(`git merge origin/main` 또는 `git pull origin main`)하는 과정에서 동일 인접 라인에 대한 비자명 병합 충돌(`Merge Conflict`)이 발생함.
 
 ### 충돌 내용(Conflict markers)
 ```txt
@@ -94,7 +95,7 @@ if __name__ == "__main__":
 * **선택한 해결 전략**: `keep both` (둘 다 유지)
 * **이유**: `subtract`와 `divide`는 서로 독립적인 유틸리티 기능으로 모두 필수적임.
 * **순서 규칙**: `main`에 이미 존재하는 `subtract`를 앞에 배치하고, 새로 추가하는 `divide`를 그 뒤에 배치하여 함수 정의부와 테스트 실행부의 순서를 동일하게 맞춤.
-* **해결 주체**: 나중에 머지되는 `PR #26` 작성자가 로컬 브랜치에서 `main`을 당겨와 충돌을 해결함.
+* **해결 주체**: 나중에 머지되는 `PR #26` 작성자(@SJendministrator)가 로컬 브랜치에서 `main`을 당겨와 충돌을 해결함.
 
 #### 수행 절차
 
@@ -122,5 +123,3 @@ if __name__ == "__main__":
 * 먼저 병합된 PR이 파일 하단에 코드를 추가한 상태에서, 뒤이어 병합을 시도하는 PR 역시 파일 하단에 코드를 붙일 경우 인접 라인 충돌(Conflict)이 반드시 터진다는 점을 체득함.
 * 충돌 해결 시 한쪽의 기능이 누락되지 않도록 `keep both` 전략을 사용할 때, 함수 정의부의 순서와 `__main__` 테스트 실행부의 순서를 일관되게 맞추는 컨벤션이 중요함을 배움.
 * 충돌 수정 후 커밋하기 전에 항상 `doctest` 및 실행 테스트, 마커 검색(`grep`)을 거치는 것이 안전한 머지 절차임을 확인함.
-
-
