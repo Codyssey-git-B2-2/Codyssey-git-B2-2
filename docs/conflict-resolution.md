@@ -11,7 +11,7 @@
 ### 상황(What happened)
 - 두 PR이 모두 `main`에서 갈라져 나와 같은 파일 `src/utils.py`를 수정했다.
   - PR #14: `add()` 함수를 추가하고 `if __name__ == "__main__":` 블록 끝에 `add` 테스트(`assert add(...)`) 2줄을 추가했다.
-  - PR #20: `subtract()` 함수를 추가하고 `if __name__ == "__main__":` 블록 끝에 `substract` 테스트(`assert subtract(...)`) 2줄을 추가했다.
+  - PR #20: `subtract()` 함수를 추가하고 `if __name__ == "__main__":` 블록 끝에 `subtract` 테스트(`assert subtract(...)`) 2줄을 추가했다.
 - 둘 중 하나가 `main`에 먼저 병합되면 나머지 PR에서 충돌이 발생하도록 의도적으로 만든 상황이다.
 #14를 먼저 병합하고 #20에서 `main`을 병합(`git merge origin/main`)하며 충돌을 해결한다.
 - `add()`, `subtract()` 함수 정의 부분과 `__main__` 블록의 테스트 줄에서 충돌한다.
